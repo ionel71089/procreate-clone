@@ -41,9 +41,24 @@ struct ContentView: View {
                 Image("grid_tile")
                     .resizable(resizingMode: .tile)
                 
-                HStack(alignment: .center) {
-                    IRScaleView()
-                        .frame(width: 30, height: 420, alignment: .leading)
+                HStack {
+                    VStack(alignment: .center) {
+                        IRScaleView()
+                            .frame(width: 30, height: 420, alignment: .leading)
+                    
+                        Button(action: {
+                            
+                        }) {
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(Color("Grid"), lineWidth: 2)
+                                .frame(width: 20, height: 20)
+                            
+                        }.padding(.top, 15)
+                        
+                    }
+                    .padding()
+                    .background(Color("Menu"))
+                    .foregroundColor(.white)
                     
                     Spacer()
                 }
