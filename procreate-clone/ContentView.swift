@@ -31,9 +31,12 @@ struct ContentView: View {
                 Rectangle()
                     .fill(Color("Background"))
                 
+                Image("grid_tile")
+                    .resizable(resizingMode: .tile)
+                
                 HStack(alignment: .center) {
                     IRScaleView()
-                        .frame(width: 50, height: 420, alignment: .leading)
+                        .frame(width: 30, height: 420, alignment: .leading)
                     
                     Spacer()
                 }
