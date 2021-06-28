@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B31A2689C11400E58131 /* procreate_cloneApp.swift */; };
+		5238B31D2689C11400E58131 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B31C2689C11400E58131 /* ContentView.swift */; };
+		5238B31F2689C11400E58131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238B31E2689C11400E58131 /* Assets.xcassets */; };
+		5238B3222689C11400E58131 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238B3212689C11400E58131 /* Preview Assets.xcassets */; };
+		5238B32D2689C11500E58131 /* procreate_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B32C2689C11500E58131 /* procreate_cloneTests.swift */; };
+		5238B3382689C11500E58131 /* procreate_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B3372689C11500E58131 /* procreate_cloneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5238B3292689C11500E58131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5238B30F2689C11300E58131 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5238B3162689C11300E58131;
+			remoteInfo = "procreate-clone";
+		};
+		5238B3342689C11500E58131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5238B30F2689C11300E58131 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5238B3162689C11300E58131;
+			remoteInfo = "procreate-clone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5238B3172689C11300E58131 /* procreate-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "procreate-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5238B31A2689C11400E58131 /* procreate_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneApp.swift; sourceTree = "<group>"; };
+		5238B31C2689C11400E58131 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5238B31E2689C11400E58131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5238B3212689C11400E58131 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5238B3232689C11400E58131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5238B3282689C11500E58131 /* procreate-cloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "procreate-cloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5238B32C2689C11500E58131 /* procreate_cloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneTests.swift; sourceTree = "<group>"; };
+		5238B32E2689C11500E58131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5238B3332689C11500E58131 /* procreate-cloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "procreate-cloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5238B3372689C11500E58131 /* procreate_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneUITests.swift; sourceTree = "<group>"; };
+		5238B3392689C11500E58131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5238B3142689C11300E58131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B3252689C11500E58131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B3302689C11500E58131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5238B30E2689C11300E58131 = {
+			isa = PBXGroup;
+			children = (
+				5238B3192689C11300E58131 /* procreate-clone */,
+				5238B32B2689C11500E58131 /* procreate-cloneTests */,
+				5238B3362689C11500E58131 /* procreate-cloneUITests */,
+				5238B3182689C11300E58131 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5238B3182689C11300E58131 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5238B3172689C11300E58131 /* procreate-clone.app */,
+				5238B3282689C11500E58131 /* procreate-cloneTests.xctest */,
+				5238B3332689C11500E58131 /* procreate-cloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5238B3192689C11300E58131 /* procreate-clone */ = {
+			isa = PBXGroup;
+			children = (
+				5238B31A2689C11400E58131 /* procreate_cloneApp.swift */,
+				5238B31C2689C11400E58131 /* ContentView.swift */,
+				5238B31E2689C11400E58131 /* Assets.xcassets */,
+				5238B3232689C11400E58131 /* Info.plist */,
+				5238B3202689C11400E58131 /* Preview Content */,
+			);
+			path = "procreate-clone";
+			sourceTree = "<group>";
+		};
+		5238B3202689C11400E58131 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5238B3212689C11400E58131 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5238B32B2689C11500E58131 /* procreate-cloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				5238B32C2689C11500E58131 /* procreate_cloneTests.swift */,
+				5238B32E2689C11500E58131 /* Info.plist */,
+			);
+			path = "procreate-cloneTests";
+			sourceTree = "<group>";
+		};
+		5238B3362689C11500E58131 /* procreate-cloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5238B3372689C11500E58131 /* procreate_cloneUITests.swift */,
+				5238B3392689C11500E58131 /* Info.plist */,
+			);
+			path = "procreate-cloneUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5238B3162689C11300E58131 /* procreate-clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5238B33C2689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-clone" */;
+			buildPhases = (
+				5238B3132689C11300E58131 /* Sources */,
+				5238B3142689C11300E58131 /* Frameworks */,
+				5238B3152689C11300E58131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "procreate-clone";
+			productName = "procreate-clone";
+			productReference = 5238B3172689C11300E58131 /* procreate-clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5238B3272689C11500E58131 /* procreate-cloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5238B33F2689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-cloneTests" */;
+			buildPhases = (
+				5238B3242689C11500E58131 /* Sources */,
+				5238B3252689C11500E58131 /* Frameworks */,
+				5238B3262689C11500E58131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5238B32A2689C11500E58131 /* PBXTargetDependency */,
+			);
+			name = "procreate-cloneTests";
+			productName = "procreate-cloneTests";
+			productReference = 5238B3282689C11500E58131 /* procreate-cloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5238B3322689C11500E58131 /* procreate-cloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5238B3422689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-cloneUITests" */;
+			buildPhases = (
+				5238B32F2689C11500E58131 /* Sources */,
+				5238B3302689C11500E58131 /* Frameworks */,
+				5238B3312689C11500E58131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5238B3352689C11500E58131 /* PBXTargetDependency */,
+			);
+			name = "procreate-cloneUITests";
+			productName = "procreate-cloneUITests";
+			productReference = 5238B3332689C11500E58131 /* procreate-cloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5238B30F2689C11300E58131 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					5238B3162689C11300E58131 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					5238B3272689C11500E58131 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5238B3162689C11300E58131;
+					};
+					5238B3322689C11500E58131 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5238B3162689C11300E58131;
+					};
+				};
+			};
+			buildConfigurationList = 5238B3122689C11300E58131 /* Build configuration list for PBXProject "procreate-clone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5238B30E2689C11300E58131;
+			productRefGroup = 5238B3182689C11300E58131 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5238B3162689C11300E58131 /* procreate-clone */,
+				5238B3272689C11500E58131 /* procreate-cloneTests */,
+				5238B3322689C11500E58131 /* procreate-cloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5238B3152689C11300E58131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5238B3222689C11400E58131 /* Preview Assets.xcassets in Resources */,
+				5238B31F2689C11400E58131 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B3262689C11500E58131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B3312689C11500E58131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5238B3132689C11300E58131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5238B31D2689C11400E58131 /* ContentView.swift in Sources */,
+				5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B3242689C11500E58131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5238B32D2689C11500E58131 /* procreate_cloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5238B32F2689C11500E58131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5238B3382689C11500E58131 /* procreate_cloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5238B32A2689C11500E58131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5238B3162689C11300E58131 /* procreate-clone */;
+			targetProxy = 5238B3292689C11500E58131 /* PBXContainerItemProxy */;
+		};
+		5238B3352689C11500E58131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5238B3162689C11300E58131 /* procreate-clone */;
+			targetProxy = 5238B3342689C11500E58131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5238B33A2689C11500E58131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5238B33B2689C11500E58131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5238B33D2689C11500E58131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"procreate-clone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "procreate-clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5238B33E2689C11500E58131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"procreate-clone/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "procreate-clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5238B3402689C11500E58131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "procreate-cloneTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-cloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/procreate-clone.app/procreate-clone";
+			};
+			name = Debug;
+		};
+		5238B3412689C11500E58131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "procreate-cloneTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-cloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/procreate-clone.app/procreate-clone";
+			};
+			name = Release;
+		};
+		5238B3432689C11500E58131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "procreate-cloneUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-cloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "procreate-clone";
+			};
+			name = Debug;
+		};
+		5238B3442689C11500E58131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "procreate-cloneUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lantern.procreate-cloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "procreate-clone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5238B3122689C11300E58131 /* Build configuration list for PBXProject "procreate-clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5238B33A2689C11500E58131 /* Debug */,
+				5238B33B2689C11500E58131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5238B33C2689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5238B33D2689C11500E58131 /* Debug */,
+				5238B33E2689C11500E58131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5238B33F2689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-cloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5238B3402689C11500E58131 /* Debug */,
+				5238B3412689C11500E58131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5238B3422689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-cloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5238B3432689C11500E58131 /* Debug */,
+				5238B3442689C11500E58131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5238B30F2689C11300E58131 /* Project object */;
+}
