@@ -39,8 +39,21 @@ struct ContentView: View {
                         )
                         .onTapGesture {
                             viewModel.isDrawing.toggle()
+                            viewModel.isMasking = false
                         }
                     
+                    Label("Mask", systemImage: "bandage")
+                        .padding(3)
+                        .padding(.horizontal, 5)
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color("Menu-Selected"))
+                                .opacity(viewModel.isMasking ? 1.0 : 0.0)
+                        )
+                        .onTapGesture {
+                            viewModel.isMasking.toggle()
+                            viewModel.isDrawing = false
+                        }
                     
                     Label("Pallette", systemImage: "paintbrush")
                         .padding(3)
@@ -109,7 +122,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, color: $viewModel.color)
+                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, isMasking: $viewModel.isMasking, color: $viewModel.color)
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))

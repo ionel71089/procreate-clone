@@ -8,9 +8,10 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published var revealValue: CGFloat = 0.0
+    @Published var revealValue: CGFloat = 1.0
     @Published var isDrawing = false
     @Published var color: Color = .white
+    @Published var isMasking = false
     
     func revealDC() {
         revealValue = 1

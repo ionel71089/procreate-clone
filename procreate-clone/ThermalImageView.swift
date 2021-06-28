@@ -26,9 +26,11 @@ struct Line: Shape {
 struct ThermalImageView: View {
     @Binding var revealValue: CGFloat
     @Binding var isDrawing: Bool
+    @Binding var isMasking: Bool
     @Binding var color: Color
     
     @State var shapes = [(lines:[CGPoint], color: Color)]()
+    @State var masks = [(lines:[CGPoint], color: Color)]()
     
     var body: some View {
         GeometryReader { geo in
@@ -38,10 +40,23 @@ struct ThermalImageView: View {
                 Image("copacIR")
                     .resizable()
                     .mask(
-                        HStack {
-                            Rectangle()
-                                .frame(width: revealValue * geo.size.width)
-                            Spacer()
+                        ZStack {
+                            HStack {
+                                Rectangle()
+                                    .frame(width: revealValue * geo.size.width)
+                                Spacer()
+                            }
+                            
+                        }
+                    )
+                
+                Image("copacDC")
+                    .resizable()
+                    .mask(
+                        ForEach((0..<masks.count), id: \.self) { index in
+                            Line(points: masks[index].lines)
+                                .stroke(lineWidth: 30)
+                                .foregroundColor(.red)
                         }
                     )
                 
@@ -50,14 +65,16 @@ struct ThermalImageView: View {
                         .stroke(lineWidth: 5)
                         .foregroundColor(shapes[index].color)
                 }
+                
+                
 
             }
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        if !isDrawing {
+                        if !isDrawing && !isMasking {
                             revealValue = max(0, min(1, (value.startLocation.x + value.translation.width) / geo.size.width))
-                        } else {
+                        } else if isDrawing {
                             let point = value.location
                             var (currentShape, _) = shapes.last!
                             if currentShape.isEmpty {
@@ -67,25 +84,38 @@ struct ThermalImageView: View {
                             if !(currentShape.last == point) {
                                 currentShape.append(point)
                                 shapes[shapes.count - 1] = (currentShape, color)
-                                print("Shapes: \(shapes)")
+                            }
+                        } else if isMasking {
+                            let point = value.location
+                            var (currentShape, _) = masks.last!
+                            if currentShape.isEmpty {
+                                currentShape.append(value.startLocation)
+                            }
+                            
+                            if !(currentShape.last == point) {
+                                currentShape.append(point)
+                                masks[masks.count - 1] = (currentShape, color)
                             }
                         }
                     }
                     .onEnded { _ in
                         if isDrawing {
                             shapes.append((lines: [CGPoint](), color: .white))
+                        } else if isMasking {
+                            masks.append((lines: [CGPoint](), color: .white))
                         }
                     }
             )
         }
         .onAppear {
             shapes.append((lines: [CGPoint](), color: .white))
+            masks.append((lines: [CGPoint](), color: .white))
         }
     }
 }
 
 struct ThermalImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), color: .constant(.black))
+        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), isMasking: .constant(false), color: .constant(.black))
     }
 }
