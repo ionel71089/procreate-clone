@@ -17,8 +17,6 @@ struct ContentView: View {
     @State private var angle: Double = 0
     @State private var lastAngle: Double = 0
     
-    @State private var color: Color = .white
-    
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
@@ -55,7 +53,7 @@ struct ContentView: View {
                     Spacer()
                         .frame(width: 30)
                     
-                    ColorPicker("", selection: $color)
+                    ColorPicker("", selection: $viewModel.color)
                         .frame(width: 22)
                 }
                 .foregroundColor(.white)
@@ -111,7 +109,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing)
+                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, color: $viewModel.color)
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))

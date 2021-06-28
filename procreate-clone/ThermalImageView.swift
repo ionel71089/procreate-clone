@@ -26,8 +26,9 @@ struct Line: Shape {
 struct ThermalImageView: View {
     @Binding var revealValue: CGFloat
     @Binding var isDrawing: Bool
+    @Binding var color: Color
     
-    @State var shapes = [[CGPoint]]()
+    @State var shapes = [(lines:[CGPoint], color: Color)]()
     
     var body: some View {
         GeometryReader { geo in
@@ -45,8 +46,9 @@ struct ThermalImageView: View {
                     )
                 
                 ForEach((0..<shapes.count), id: \.self) { index in
-                    Line(points: shapes[index])
+                    Line(points: shapes[index].lines)
                         .stroke(lineWidth: 5)
+                        .foregroundColor(shapes[index].color)
                 }
 
             }
@@ -57,33 +59,33 @@ struct ThermalImageView: View {
                             revealValue = max(0, min(1, (value.startLocation.x + value.translation.width) / geo.size.width))
                         } else {
                             let point = value.location
-                            var currentShape = shapes.last!
+                            var (currentShape, _) = shapes.last!
                             if currentShape.isEmpty {
                                 currentShape.append(value.startLocation)
                             }
                             
                             if !(currentShape.last == point) {
                                 currentShape.append(point)
-                                shapes[shapes.count - 1] = currentShape
+                                shapes[shapes.count - 1] = (currentShape, color)
                                 print("Shapes: \(shapes)")
                             }
                         }
                     }
                     .onEnded { _ in
                         if isDrawing {
-                            shapes.append([CGPoint]())
+                            shapes.append((lines: [CGPoint](), color: .white))
                         }
                     }
             )
         }
         .onAppear {
-            shapes.append([CGPoint]())
+            shapes.append((lines: [CGPoint](), color: .white))
         }
     }
 }
 
 struct ThermalImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false))
+        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), color: .constant(.black))
     }
 }
