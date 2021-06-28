@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var scale: CGFloat = 1.0
+    @State var lastScaleValue: CGFloat = 1.0
+    @State private var offset = CGSize.zero
+    
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
@@ -43,8 +47,25 @@ struct ContentView: View {
                 
                 ThermalImageView()
                     .frame(width: 800, height: 600)
+                    .scaleEffect(scale)
+                    .rotationEffect(.degrees(Double(offset.width / 5)))
+                    .offset(x: offset.width, y: offset.height)
+                    .gesture(
+                        MagnificationGesture()
+                            .onChanged { value in
+                                let delta = value / self.lastScaleValue
+                                self.lastScaleValue = value
+                                scale = self.scale * delta
+                            }.onEnded{val in
+                                lastScaleValue = 1
+                            })
+                    .gesture(
+                        DragGesture()
+                            .onChanged { gesture in
+                                self.offset = gesture.translation
+                            }
+                    )
             }
-            
         }
     }
 }
