@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */; };
 		5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B31A2689C11400E58131 /* procreate_cloneApp.swift */; };
 		5238B31D2689C11400E58131 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B31C2689C11400E58131 /* ContentView.swift */; };
 		5238B31F2689C11400E58131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238B31E2689C11400E58131 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalImageView.swift; sourceTree = "<group>"; };
 		5238B3172689C11300E58131 /* procreate-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "procreate-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5238B31A2689C11400E58131 /* procreate_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneApp.swift; sourceTree = "<group>"; };
 		5238B31C2689C11400E58131 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5238B31E2689C11400E58131 /* Assets.xcassets */,
 				5238B3232689C11400E58131 /* Info.plist */,
 				5238B3202689C11400E58131 /* Preview Content */,
+				0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */,
 			);
 			path = "procreate-clone";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */,
 				5238B31D2689C11400E58131 /* ContentView.swift in Sources */,
 				5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */,
 			);

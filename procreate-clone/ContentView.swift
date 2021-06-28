@@ -39,8 +39,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                Rectangle()
-                    .fill(Color.white)
+                ThermalImageView()
                     .frame(width: 800, height: 600)
             }
             
