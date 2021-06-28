@@ -75,14 +75,33 @@ struct ContentView: View {
                         IRScaleView()
                             .frame(width: 30, height: 420, alignment: .leading)
                     
-                        Button(action: {
-                            
-                        }) {
+
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color("Grid"), lineWidth: 2)
                                 .frame(width: 20, height: 20)
-                            
-                        }.padding(.top, 15)
+                                .padding(.top, 15)
+                                .onTapGesture {
+                                    withAnimation {
+                                        if viewModel.revealValue == 0 {
+                                            viewModel.revealDC()
+                                        } else {
+                                            viewModel.hideDC()
+                                        }
+                                    }
+                                }
+                                .gesture(
+                                    DragGesture(minimumDistance: 0)
+                                        .onChanged { value in
+                                            withAnimation {
+                                                viewModel.revealDC()
+                                            }
+                                        }
+                                        .onEnded { value in
+                                            withAnimation {
+                                                viewModel.hideDC()
+                                            }
+                                    }
+                                )
                         
                     }
                     .padding()

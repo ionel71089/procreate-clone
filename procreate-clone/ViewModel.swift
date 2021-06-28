@@ -13,4 +13,12 @@ class ViewModel: ObservableObject {
     
     @Published
     var isDrawing = false
+    
+    func revealDC() {
+        revealValue = 1
+    }
+    
+    func hideDC() {
+        revealValue = 0
+    }
 }
