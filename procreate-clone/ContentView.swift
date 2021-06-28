@@ -32,8 +32,7 @@ struct ContentView: View {
                     .fill(Color("Background"))
                 
                 HStack(alignment: .center) {
-                    Rectangle()
-                        .fill(Color.black)
+                    IRScaleView()
                         .frame(width: 50, height: 420, alignment: .leading)
                     
                     Spacer()
