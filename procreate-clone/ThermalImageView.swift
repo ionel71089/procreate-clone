@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ThermalImageView: View {
-    @State
-    private var revealValue: CGFloat = 0.0
+    @Binding var revealValue: CGFloat
     
     var body: some View {
         
@@ -27,16 +26,18 @@ struct ThermalImageView: View {
                         }
                     )
             }
-            .gesture(DragGesture()
-                        .onChanged { value in
-                            revealValue = max(0, min(1, (value.startLocation.x + value.translation.width) / geo.size.width))
-                        })
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        revealValue = max(0, min(1, (value.startLocation.x + value.translation.width) / geo.size.width))
+                    }
+            )
         }
     }
 }
 
 struct ThermalImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalImageView()
+        ThermalImageView(revealValue: .constant(0.5))
     }
 }

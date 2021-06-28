@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = ViewModel()
+    
     @State var scale: CGFloat = 1.0
     @State var lastScaleValue: CGFloat = 1.0
     @State private var offset = CGSize.zero
     @State private var lastOffset = CGSize.zero
     @State private var angle: Double = 0
     @State private var lastAngle: Double = 0
+    
+    @State private var color: Color = .white
     
     var body: some View {
         VStack(spacing: 0) {
@@ -23,12 +27,36 @@ struct ContentView: View {
                     .frame(height: 50)
                 
                 HStack {
-                    Text("Gallery")
+                    Label("Gallery", systemImage: "photo.on.rectangle.angled")
                     
                     Spacer()
                     
+                    Label("Annotate", systemImage: "hand.draw")
+                        .padding(3)
+                        .padding(.horizontal, 5)
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color("Menu-Selected"))
+                                .opacity(viewModel.isDrawing ? 1.0 : 0.0)
+                        )
+                        .onTapGesture {
+                            viewModel.isDrawing.toggle()
+                        }
+                    
+                    
                     Label("Pallette", systemImage: "paintbrush")
-                    Label("Measurement", systemImage: "circle.grid.cross")
+                        .padding(3)
+                        .padding(.horizontal, 5)
+                    
+                    Label("Measurement", systemImage: "ruler")
+                        .padding(3)
+                        .padding(.horizontal, 5)
+                    
+                    Spacer()
+                        .frame(width: 30)
+                    
+                    ColorPicker("", selection: $color)
+                        .frame(width: 22)
                 }
                 .foregroundColor(.white)
                 .padding()
@@ -40,6 +68,7 @@ struct ContentView: View {
                 
                 Image("grid_tile")
                     .resizable(resizingMode: .tile)
+                    .opacity(0.3)
                 
                 HStack(alignment: .center) {
                     IRScaleView()
@@ -48,7 +77,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                ThermalImageView()
+                ThermalImageView(revealValue: $viewModel.revealValue)
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))
