@@ -11,6 +11,9 @@ struct ContentView: View {
     @State var scale: CGFloat = 1.0
     @State var lastScaleValue: CGFloat = 1.0
     @State private var offset = CGSize.zero
+    @State private var lastOffset = CGSize.zero
+    @State private var angle: Double = 0
+    @State private var lastAngle: Double = 0
     
     var body: some View {
         VStack(spacing: 0) {
@@ -48,7 +51,7 @@ struct ContentView: View {
                 ThermalImageView()
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
-                    .rotationEffect(.degrees(Double(offset.width / 5)))
+                    .rotationEffect(Angle.degrees(angle))
                     .offset(x: offset.width, y: offset.height)
                     .gesture(
                         MagnificationGesture()
@@ -56,16 +59,30 @@ struct ContentView: View {
                                 let delta = value / self.lastScaleValue
                                 self.lastScaleValue = value
                                 scale = self.scale * delta
-                            }.onEnded{val in
+                            }.onEnded{ _ in
                                 lastScaleValue = 1
-                            })
-                    .gesture(
-                        DragGesture()
-                            .onChanged { gesture in
-                                self.offset = gesture.translation
                             }
                     )
             }
+            .gesture(
+                DragGesture()
+                    .onChanged { gesture in
+                        offset = CGSize(width: lastOffset.width + gesture.translation.width,
+                                        height: lastOffset.height + gesture.translation.height)
+                    }
+                    .onEnded { _ in
+                        lastOffset = offset
+                    }
+            )
+            .gesture(
+                RotationGesture()
+                    .onChanged { angle in
+                        self.angle = lastAngle + angle.degrees
+                    }
+                    .onEnded { _ in
+                        lastAngle = angle
+                    }
+            )
         }
     }
 }
@@ -76,3 +93,5 @@ struct ContentView_Previews: PreviewProvider {
             .previewLayout(.fixed(width: 1024, height: 768))
     }
 }
+
+
