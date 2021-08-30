@@ -37,9 +37,9 @@ struct ThermalImageView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image(uiImage: viewModel.dcImage())
+                Image(uiImage: viewModel.dcImage)
                     .resizable()
-                Image(uiImage: viewModel.irImage())
+                Image(uiImage: viewModel.irImage)
                     .resizable()
                     .mask(
                         ZStack {
@@ -52,7 +52,7 @@ struct ThermalImageView: View {
                         }
                     )
                 
-                Image(uiImage: viewModel.dcImage())
+                Image(uiImage: viewModel.dcImage)
                     .resizable()
                     .mask(
                         ForEach((0..<masks.count), id: \.self) { index in

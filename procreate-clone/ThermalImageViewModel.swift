@@ -9,23 +9,25 @@ import Foundation
 import ThermalSDK
 import SwiftUI
 
-
-
-class ThermalImageViewModel {
-    let thermalImage = FLIRThermalImageFile()
+class ThermalImageViewModel: ObservableObject {
+    private let thermalImage = FLIRThermalImageFile()
+    
+    @Published var dcImage: UIImage
+    @Published var irImage: UIImage
     
     init(path: String) {
         thermalImage.open(path)
         thermalImage.getImage()
-    }
-    
-    func dcImage() -> UIImage {
-        thermalImage.getFusion()?.setFusionMode(VISUAL_MODE)
-        return thermalImage.getImage()!
-    }
-    
-    func irImage() -> UIImage {
         thermalImage.getFusion()?.setFusionMode(FUSION_MSX_MODE)
-        return thermalImage.getImage()!
+        irImage = thermalImage.getImage()!
+        thermalImage.getFusion()?.setFusionMode(VISUAL_MODE)
+        dcImage = thermalImage.getImage()!
+    }
+    
+    private func updateImages() {
+        thermalImage.getFusion()?.setFusionMode(FUSION_MSX_MODE)
+        irImage = thermalImage.getImage()!
+        thermalImage.getFusion()?.setFusionMode(VISUAL_MODE)
+        dcImage = thermalImage.getImage()!
     }
 }
