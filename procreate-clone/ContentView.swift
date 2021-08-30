@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var lastOffset = CGSize.zero
     @State private var angle: Double = 0
     @State private var lastAngle: Double = 0
+    @State private var showingOverlaysPopover = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -28,6 +29,16 @@ struct ContentView: View {
                     Label("Gallery", systemImage: "photo.on.rectangle.angled")
                     
                     Spacer()
+                    
+                    Label("Overlays", systemImage: "square.stack.3d.down.right")
+                        .padding(3)
+                        .padding(.horizontal, 5)
+                        .onTapGesture {
+                            self.showingOverlaysPopover.toggle()
+                        }
+                        .popover(isPresented: $showingOverlaysPopover, content: {
+                            OverlaysPopover(isAgendaVisible: $viewModel.isAgendaVisible, isLogoVisible: $viewModel.isLogoVisible)
+                        })
                     
                     Label("Annotate", systemImage: "hand.draw")
                         .padding(3)
@@ -122,7 +133,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, isMasking: $viewModel.isMasking, color: $viewModel.color)
+                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, isMasking: $viewModel.isMasking, color: $viewModel.color, isLogoVisible: $viewModel.isLogoVisible, isAgendaVisible: $viewModel.isAgendaVisible)
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))

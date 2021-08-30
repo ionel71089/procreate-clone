@@ -28,6 +28,8 @@ struct ThermalImageView: View {
     @Binding var isDrawing: Bool
     @Binding var isMasking: Bool
     @Binding var color: Color
+    @Binding var isLogoVisible: Bool
+    @Binding var isAgendaVisible: Bool
     
     @State private var agendaPosition: CGPoint?
     @State private var logoPostion: CGPoint?
@@ -71,22 +73,26 @@ struct ThermalImageView: View {
                         .foregroundColor(shapes[index].color)
                 }
                 
-                Image("mobileAgenda")
-                    .position(agendaPosition ?? CGPoint(x: 52, y: 56))
-                    .gesture(
-                        DragGesture()
-                            .onChanged { value in
-                                self.agendaPosition = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
-                            }
-                    )
-                Image("flirLogo")
-                    .position(logoPostion ?? CGPoint(x: 50, y: geo.size.height - 28))
-                    .gesture(
-                        DragGesture()
-                            .onChanged { value in
-                                self.logoPostion = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
-                            }
-                    )
+                if isAgendaVisible {
+                    Image("mobileAgenda")
+                        .position(agendaPosition ?? CGPoint(x: 52, y: 56))
+                        .gesture(
+                            DragGesture()
+                                .onChanged { value in
+                                    self.agendaPosition = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
+                                }
+                        )
+                }
+                if isLogoVisible {
+                    Image("flirLogo")
+                        .position(logoPostion ?? CGPoint(x: 50, y: geo.size.height - 28))
+                        .gesture(
+                            DragGesture()
+                                .onChanged { value in
+                                    self.logoPostion = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
+                                }
+                        )
+                }
 
             }
             .gesture(
@@ -136,6 +142,6 @@ struct ThermalImageView: View {
 
 struct ThermalImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), isMasking: .constant(false), color: .constant(.black))
+        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), isMasking: .constant(false), color: .constant(.black), isLogoVisible: .constant(true), isAgendaVisible: .constant(true))
     }
 }

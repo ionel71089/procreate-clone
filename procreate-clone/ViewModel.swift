@@ -12,6 +12,8 @@ class ViewModel: ObservableObject {
     @Published var isDrawing = false
     @Published var color: Color = .white
     @Published var isMasking = false
+    @Published var isLogoVisible = true
+    @Published var isAgendaVisible = true
     
     func revealDC() {
         revealValue = 1

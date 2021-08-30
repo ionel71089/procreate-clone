@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09827DEC26DD1D8200489925 /* OverlaysPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09827DEB26DD1D8200489925 /* OverlaysPopover.swift */; };
 		09D76E8B26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */; };
 		09D76E9226DCDE1F00FA7AD7 /* sample5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */; };
 		0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09827DEB26DD1D8200489925 /* OverlaysPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlaysPopover.swift; sourceTree = "<group>"; };
 		09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalImageViewModel.swift; sourceTree = "<group>"; };
 		09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample5.jpg; sourceTree = "<group>"; };
 		0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalImageView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */,
 				09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */,
 				0DD11A0D2689D052004F3AB4 /* IRScaleView.swift */,
+				09827DEB26DD1D8200489925 /* OverlaysPopover.swift */,
 			);
 			path = "procreate-clone";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				52B28E962689FCFA00EEE467 /* ViewModel.swift in Sources */,
 				0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */,
+				09827DEC26DD1D8200489925 /* OverlaysPopover.swift in Sources */,
 				09D76E8B26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift in Sources */,
 				5238B31D2689C11400E58131 /* ContentView.swift in Sources */,
 				0DD11A0E2689D052004F3AB4 /* IRScaleView.swift in Sources */,
