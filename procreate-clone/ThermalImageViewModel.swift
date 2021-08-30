@@ -12,14 +12,13 @@ import SwiftUI
 class ThermalImageViewModel: ObservableObject {
     private let thermalImage = FLIRThermalImageFile()
     
-    @Published var dcImage: UIImage?
-    @Published var irImage: UIImage?
-    @Published var scaleImage: UIImage?
+    @Published var dcImage: UIImage!
+    @Published var irImage: UIImage!
+    @Published var scaleImage: UIImage!
     
     init(path: String) {
         thermalImage.open(path)
         thermalImage.getImage()
-        super.init()
         updateImages()
     }
     
