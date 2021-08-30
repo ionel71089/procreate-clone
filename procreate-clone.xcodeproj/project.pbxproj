@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D76E8B26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */; };
+		09D76E9226DCDE1F00FA7AD7 /* sample5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */; };
 		0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */; };
 		0DD11A0E2689D052004F3AB4 /* IRScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD11A0D2689D052004F3AB4 /* IRScaleView.swift */; };
 		5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B31A2689C11400E58131 /* procreate_cloneApp.swift */; };
@@ -16,6 +18,7 @@
 		5238B32D2689C11500E58131 /* procreate_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B32C2689C11500E58131 /* procreate_cloneTests.swift */; };
 		5238B3382689C11500E58131 /* procreate_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B3372689C11500E58131 /* procreate_cloneUITests.swift */; };
 		52B28E962689FCFA00EEE467 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B28E952689FCFA00EEE467 /* ViewModel.swift */; };
+		D642BD6B63CDB3C448ADE783 /* Pods_procreate_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B621957E6BD5ACBB0DC1C0 /* Pods_procreate_clone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalImageViewModel.swift; sourceTree = "<group>"; };
+		09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample5.jpg; sourceTree = "<group>"; };
 		0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermalImageView.swift; sourceTree = "<group>"; };
 		0DD11A0D2689D052004F3AB4 /* IRScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRScaleView.swift; sourceTree = "<group>"; };
+		2ACD2B30A516F7FDD0E2BB67 /* Pods-procreate-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-procreate-clone.release.xcconfig"; path = "Target Support Files/Pods-procreate-clone/Pods-procreate-clone.release.xcconfig"; sourceTree = "<group>"; };
 		5238B3172689C11300E58131 /* procreate-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "procreate-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5238B31A2689C11400E58131 /* procreate_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneApp.swift; sourceTree = "<group>"; };
 		5238B31C2689C11400E58131 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		5238B3372689C11500E58131 /* procreate_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneUITests.swift; sourceTree = "<group>"; };
 		5238B3392689C11500E58131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B28E952689FCFA00EEE467 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		69B621957E6BD5ACBB0DC1C0 /* Pods_procreate_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_procreate_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90CA007C8D4B1CF52CEC7046 /* Pods-procreate-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-procreate-clone.debug.xcconfig"; path = "Target Support Files/Pods-procreate-clone/Pods-procreate-clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D642BD6B63CDB3C448ADE783 /* Pods_procreate_clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D76E9026DCDE0900FA7AD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5238B30E2689C11300E58131 = {
 			isa = PBXGroup;
 			children = (
+				09D76E9026DCDE0900FA7AD7 /* Resources */,
 				5238B3192689C11300E58131 /* procreate-clone */,
 				5238B32B2689C11500E58131 /* procreate-cloneTests */,
 				5238B3362689C11500E58131 /* procreate-cloneUITests */,
 				5238B3182689C11300E58131 /* Products */,
+				5C351B6E9522BCC50D2B7537 /* Pods */,
+				62D05E4ADF710ED6CAAF4DA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +128,7 @@
 				5238B3232689C11400E58131 /* Info.plist */,
 				5238B3202689C11400E58131 /* Preview Content */,
 				0DD11A082689CFA0004F3AB4 /* ThermalImageView.swift */,
+				09D76E8A26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift */,
 				0DD11A0D2689D052004F3AB4 /* IRScaleView.swift */,
 			);
 			path = "procreate-clone";
@@ -139,6 +160,23 @@
 			path = "procreate-cloneUITests";
 			sourceTree = "<group>";
 		};
+		5C351B6E9522BCC50D2B7537 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90CA007C8D4B1CF52CEC7046 /* Pods-procreate-clone.debug.xcconfig */,
+				2ACD2B30A516F7FDD0E2BB67 /* Pods-procreate-clone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		62D05E4ADF710ED6CAAF4DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B621957E6BD5ACBB0DC1C0 /* Pods_procreate_clone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5238B33C2689C11500E58131 /* Build configuration list for PBXNativeTarget "procreate-clone" */;
 			buildPhases = (
+				DA3C93ED2409AB21A2D8FF03 /* [CP] Check Pods Manifest.lock */,
 				5238B3132689C11300E58131 /* Sources */,
 				5238B3142689C11300E58131 /* Frameworks */,
 				5238B3152689C11300E58131 /* Resources */,
+				A190D25B9B2F1421683CFAA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5238B3222689C11400E58131 /* Preview Assets.xcassets in Resources */,
+				09D76E9226DCDE1F00FA7AD7 /* sample5.jpg in Resources */,
 				5238B31F2689C11400E58131 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +304,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A190D25B9B2F1421683CFAA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-procreate-clone/Pods-procreate-clone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-procreate-clone/Pods-procreate-clone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-procreate-clone/Pods-procreate-clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA3C93ED2409AB21A2D8FF03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-procreate-clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5238B3132689C11300E58131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,6 +353,7 @@
 			files = (
 				52B28E962689FCFA00EEE467 /* ViewModel.swift in Sources */,
 				0DD11A092689CFA0004F3AB4 /* ThermalImageView.swift in Sources */,
+				09D76E8B26DCDA5F00FA7AD7 /* ThermalImageViewModel.swift in Sources */,
 				5238B31D2689C11400E58131 /* ContentView.swift in Sources */,
 				0DD11A0E2689D052004F3AB4 /* IRScaleView.swift in Sources */,
 				5238B31B2689C11400E58131 /* procreate_cloneApp.swift in Sources */,
@@ -426,6 +510,7 @@
 		};
 		5238B33D2689C11500E58131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90CA007C8D4B1CF52CEC7046 /* Pods-procreate-clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +532,7 @@
 		};
 		5238B33E2689C11500E58131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ACD2B30A516F7FDD0E2BB67 /* Pods-procreate-clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

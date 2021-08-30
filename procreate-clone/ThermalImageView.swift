@@ -32,12 +32,14 @@ struct ThermalImageView: View {
     @State var shapes = [(lines:[CGPoint], color: Color)]()
     @State var masks = [(lines:[CGPoint], color: Color)]()
     
+    var viewModel = ThermalImageViewModel(path: Bundle.main.url(forResource: "sample5.jpg", withExtension: nil)!.path)
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image("copacDC")
+                Image(uiImage: viewModel.dcImage())
                     .resizable()
-                Image("copacIR")
+                Image(uiImage: viewModel.irImage())
                     .resizable()
                     .mask(
                         ZStack {
@@ -50,7 +52,7 @@ struct ThermalImageView: View {
                         }
                     )
                 
-                Image("copacDC")
+                Image(uiImage: viewModel.dcImage())
                     .resizable()
                     .mask(
                         ForEach((0..<masks.count), id: \.self) { index in

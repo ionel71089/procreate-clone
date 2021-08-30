@@ -1,0 +1,16 @@
+PODS:
+  - FLIRThermalSDK (1.7.2)
+
+DEPENDENCIES:
+  - FLIRThermalSDK
+
+SPEC REPOS:
+  "ssh://git@github.com/varasto/apple-cocoapodspecs.git":
+    - FLIRThermalSDK
+
+SPEC CHECKSUMS:
+  FLIRThermalSDK: 8895f3ff9dc55c1e1d47b22b1dfbd3a318d83d6c
+
+PODFILE CHECKSUM: 212c26f63581c3c8aa442fdb069fb9e0a3357d81
+
+COCOAPODS: 1.10.2
