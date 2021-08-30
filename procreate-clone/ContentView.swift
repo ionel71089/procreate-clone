@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
+    @ObservedObject var imageViewModel = ThermalImageViewModel(path: Bundle.main.url(forResource: "sample5.jpg", withExtension: nil)!.path)
     
     @State var scale: CGFloat = 1.0
     @State var lastScaleValue: CGFloat = 1.0
@@ -17,6 +18,11 @@ struct ContentView: View {
     @State private var angle: Double = 0
     @State private var lastAngle: Double = 0
     @State private var showingOverlaysPopover = false
+    
+    @State private var min: CGFloat = 2
+    @State private var max: CGFloat = 5
+    private var range: ClosedRange<CGFloat> = 0 ... 10
+    
     
     var body: some View {
         VStack(spacing: 0) {
@@ -94,7 +100,12 @@ struct ContentView: View {
                 
                 HStack {
                     VStack(alignment: .center) {
-                        IRScaleView()
+                        IRScaleView(
+                            image: Image(uiImage: imageViewModel.scaleImage), 
+                            min: $imageViewModel.irScaleMin,
+                            max: $imageViewModel.irScaleMax,
+                            range: $imageViewModel.range
+                        )
                             .frame(width: 30, height: 420, alignment: .leading)
                     
 
@@ -169,6 +180,7 @@ struct ContentView: View {
                     }
             )
         }
+        .statusBar(hidden: true)
     }
 }
 

@@ -37,7 +37,7 @@ struct ThermalImageView: View {
     @State var shapes = [(lines:[CGPoint], color: Color)]()
     @State var masks = [(lines:[CGPoint], color: Color)]()
     
-    var viewModel = ThermalImageViewModel(path: Bundle.main.url(forResource: "sample5.jpg", withExtension: nil)!.path)
+    @ObservedObject var viewModel: ThermalImageViewModel
     
     var body: some View {
         GeometryReader { geo in

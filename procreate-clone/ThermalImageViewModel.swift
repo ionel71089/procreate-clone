@@ -8,6 +8,7 @@
 import Foundation
 import ThermalSDK
 import SwiftUI
+import Combine
 
 struct Measurement: Identifiable {
     var id = UUID()
@@ -26,17 +27,50 @@ class ThermalImageViewModel: ObservableObject {
     @Published var scaleImage: UIImage!
     @Published var temperatures = [Measurement]()
     
+    @Published var irScaleMin: CGFloat
+    @Published var irScaleMax: CGFloat
+    @Published var range: ClosedRange<CGFloat>
+    
+    private var disposeBag = Set<AnyCancellable>()
+    
     init(path: String) {
         thermalImage.open(path)
         thermalImage.setTemperatureUnit(.CELSIUS)
         thermalImage.getImage()
+        thermalImage.setTemperatureUnit(.CELSIUS)
+        
+        irScaleMin = CGFloat(thermalImage.getScale()!.getRangeMin().value)
+        irScaleMax = CGFloat(thermalImage.getScale()!.getRangeMax().value)
+        
+        let cameraInfo = thermalImage.getCameraInformation()!
+        range = CGFloat(cameraInfo.rangeMin.asCelsius().value) ... CGFloat(cameraInfo.rangeMax.asCelsius().value)
+        
         updateImages()
+        bind()
+    }
+    
+    private func bind() {
+        $irScaleMin
+            .dropFirst()
+            .throttle(for: 1, scheduler: RunLoop.main, latest: true)
+            .sink { value in
+            self.setScaleMin(value: Double(value))
+        }.store(in: &disposeBag)
+
+        $irScaleMax
+            .dropFirst()
+            .throttle(for: 1, scheduler: RunLoop.main, latest: true)
+            .sink { value in
+            self.setScaleMax(value: Double(value))
+        }.store(in: &disposeBag)
     }
     
     private func updateImages() {
+        print("update")
         thermalImage.getFusion()?.setFusionMode(FUSION_MSX_MODE)
         irImage = thermalImage.getImage()!
-        scaleImage = thermalImage.getScale()!.getImage()!
+        let img = thermalImage.getScale()!.getImage()!
+        scaleImage = img
         thermalImage.getFusion()?.setFusionMode(VISUAL_MODE)
         dcImage = thermalImage.getImage()!
         temperatures = thermalImage.measurements?.getAllSpots().map{ Measurement(temperature: $0.getValue().value) } ?? []
