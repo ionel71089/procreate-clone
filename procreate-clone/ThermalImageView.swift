@@ -142,6 +142,12 @@ struct ThermalImageView: View {
 
 struct ThermalImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ThermalImageView(revealValue: .constant(0.5), isDrawing: .constant(false), isMasking: .constant(false), color: .constant(.black), isLogoVisible: .constant(true), isAgendaVisible: .constant(true))
+        ThermalImageView(revealValue: .constant(0.5),
+                         isDrawing: .constant(false),
+                         isMasking: .constant(false),
+                         color: .constant(.black),
+                         isLogoVisible: .constant(true),
+                         isAgendaVisible: .constant(true),
+                         viewModel: ThermalImageViewModel(path: Bundle.main.url(forResource: "sample5.jpg", withExtension: nil)!.path))
     }
 }

@@ -144,7 +144,13 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, isMasking: $viewModel.isMasking, color: $viewModel.color, isLogoVisible: $viewModel.isLogoVisible, isAgendaVisible: $viewModel.isAgendaVisible)
+                ThermalImageView(revealValue: $viewModel.revealValue,
+                                 isDrawing: $viewModel.isDrawing,
+                                 isMasking: $viewModel.isMasking,
+                                 color: $viewModel.color,
+                                 isLogoVisible: $viewModel.isLogoVisible,
+                                 isAgendaVisible: $viewModel.isAgendaVisible,
+                                 viewModel: imageViewModel)
                     .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))
