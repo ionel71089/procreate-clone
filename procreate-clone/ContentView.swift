@@ -123,7 +123,7 @@ struct ContentView: View {
                 }
                 
                 ThermalImageView(revealValue: $viewModel.revealValue, isDrawing: $viewModel.isDrawing, isMasking: $viewModel.isMasking, color: $viewModel.color)
-                    .frame(width: 600, height: 800)
+                    .frame(width: 800, height: 600)
                     .scaleEffect(scale)
                     .rotationEffect(Angle.degrees(angle))
                     .offset(x: offset.width, y: offset.height)

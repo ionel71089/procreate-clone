@@ -29,6 +29,9 @@ struct ThermalImageView: View {
     @Binding var isMasking: Bool
     @Binding var color: Color
     
+    @State private var agendaPosition: CGPoint?
+    @State private var logoPostion: CGPoint?
+    
     @State var shapes = [(lines:[CGPoint], color: Color)]()
     @State var masks = [(lines:[CGPoint], color: Color)]()
     
@@ -68,7 +71,22 @@ struct ThermalImageView: View {
                         .foregroundColor(shapes[index].color)
                 }
                 
-                
+                Image("mobileAgenda")
+                    .position(agendaPosition ?? CGPoint(x: 52, y: 56))
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                self.agendaPosition = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
+                            }
+                    )
+                Image("flirLogo")
+                    .position(logoPostion ?? CGPoint(x: 50, y: geo.size.height - 28))
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                self.logoPostion = CGPoint(x: value.startLocation.x + value.translation.width, y: value.startLocation.y + value.translation.height)
+                            }
+                    )
 
             }
             .gesture(
