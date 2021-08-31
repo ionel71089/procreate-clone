@@ -85,4 +85,13 @@ class ThermalImageViewModel: ObservableObject {
         thermalImage.getScale()!.setRangeMax(FLIRThermalValue(value: value, andUnit: .CELSIUS))
         updateImages()
     }
+    
+    var imageSize: CGSize {
+        let size = dcImage.size
+        if size.width > size.height {
+            return CGSize(width: 800, height: 600)
+        } else {
+            return CGSize(width: 600 * 0.6, height: 800 * 0.6)
+        }
+    }
 }

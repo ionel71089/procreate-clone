@@ -19,7 +19,9 @@
 		5238B32D2689C11500E58131 /* procreate_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B32C2689C11500E58131 /* procreate_cloneTests.swift */; };
 		5238B3382689C11500E58131 /* procreate_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238B3372689C11500E58131 /* procreate_cloneUITests.swift */; };
 		52571BA926DCFA10008740C1 /* Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52571BA826DCFA10008740C1 /* Lerp.swift */; };
+		52571BC226DD2E60008740C1 /* laptop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52571BC126DD2E60008740C1 /* laptop.jpg */; };
 		52B28E962689FCFA00EEE467 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B28E952689FCFA00EEE467 /* ViewModel.swift */; };
+		52B629AE26DE150B002819EF /* desk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52B629AD26DE150B002819EF /* desk.jpg */; };
 		D642BD6B63CDB3C448ADE783 /* Pods_procreate_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B621957E6BD5ACBB0DC1C0 /* Pods_procreate_clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +62,9 @@
 		5238B3372689C11500E58131 /* procreate_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = procreate_cloneUITests.swift; sourceTree = "<group>"; };
 		5238B3392689C11500E58131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52571BA826DCFA10008740C1 /* Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lerp.swift; sourceTree = "<group>"; };
+		52571BC126DD2E60008740C1 /* laptop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laptop.jpg; sourceTree = "<group>"; };
 		52B28E952689FCFA00EEE467 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		52B629AD26DE150B002819EF /* desk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desk.jpg; sourceTree = "<group>"; };
 		69B621957E6BD5ACBB0DC1C0 /* Pods_procreate_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_procreate_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CA007C8D4B1CF52CEC7046 /* Pods-procreate-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-procreate-clone.debug.xcconfig"; path = "Target Support Files/Pods-procreate-clone/Pods-procreate-clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				09D76E9126DCDE1F00FA7AD7 /* sample5.jpg */,
+				52571BC126DD2E60008740C1 /* laptop.jpg */,
+				52B629AD26DE150B002819EF /* desk.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5238B3222689C11400E58131 /* Preview Assets.xcassets in Resources */,
+				52571BC226DD2E60008740C1 /* laptop.jpg in Resources */,
 				09D76E9226DCDE1F00FA7AD7 /* sample5.jpg in Resources */,
+				52B629AE26DE150B002819EF /* desk.jpg in Resources */,
 				5238B31F2689C11400E58131 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
